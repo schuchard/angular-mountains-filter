@@ -1,0 +1,12 @@
+.container {
+	margin-left: 60px;
+}
+
+.filtered-total {
+		display: inline-block;
+    font-size: 30px;
+    margin: 2px 10px;
+    position: absolute;
+    top: 21px;
+    left: 290px;
+}

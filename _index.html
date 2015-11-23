@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- define the module -->
+<html lang="en" ng-app="mountains">
+
+<head>
+  <meta charset="utf-8">
+  <title>Angular Peaks</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+  <!-- define controller-->
+  <div class='container' ng-controller='demoCtrl'>
+    <h1>Angular Peaks</h1>
+    <!-- display the length of filtered results -->
+    <p class="filtered-total">{{(mountains|filter:query).length}}</p>
+    <form class="pure-form">
+      <!-- define model to be used for filtering when typing -->
+      <input ng-model="query">
+      <span>Sort by:</span>
+      <!-- defing model to be used for ordering from dropdown -->
+      <select ng-model="orderProp">
+        <option value="key">Peak</option>
+        <option value="val">Height</option>
+        <option value="location">Location</option>
+      </select>
+       <!-- call the sort function when the Reverse button is clicked -->
+      <button class="pure-button pure-button-primary" ng-click="sort()">Reverse</button>
+    </form>
+
+    <ul>
+      <!-- repeat over mountains array / define filter / define orderBy-->
+      <li ng-repeat="mountain in mountains | filter:query | orderBy:orderProp:reverse">
+        <!-- data binding between model and view -->
+        <p>{{mountain.key}} - {{mountain.val}} - {{mountain.location}}</p>
+      </li>
+    </ul>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>

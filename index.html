@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- define the module -->
+<html lang="en" ng-app=" ">
+
+<head>
+  <meta charset="utf-8">
+  <title>Angular Peaks</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/0.6.0/pure-min.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+  <!-- define controller-->
+  <div class='container' >
+    <h1>Angular Peaks</h1>
+    <!-- display the length of filtered results -->
+    <p class="filtered-total"> </p>
+    <form class="pure-form">
+      <!-- define model to be used for filtering when typing -->
+      <input >
+      <span>Sort by:</span>
+      <!-- defing model to be used for ordering from dropdown -->
+      <select >
+        <option value=" ">Peak</option>
+        <option value=" ">Height</option>
+        <option value=" ">Location</option>
+      </select>
+      <!-- call the sort function when the Reverse button is clicked -->
+      <button class="pure-button pure-button-primary" >Reverse</button>
+    </form>
+
+    <ul>
+      <!-- repeat over mountains array / define filter / define orderBy-->
+      <li >
+        <!-- data binding between model and view -->
+        <p> </p>
+      </li>
+    </ul>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
