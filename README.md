@@ -1,5 +1,7 @@
 # Angular Mountains
 
+#### [LIVE DEMO](http://schuchard.github.io/angular-mountains-filter/)
+
 This presentation covers the usage of `filter` with a text input, dropdown and `orderBy` with a toggle button.
 
 This works through the `index.html`. The complete code can be found in the `_index.html` file.
